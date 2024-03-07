@@ -1,0 +1,77 @@
+version: '3.2'
+services:
+  arch:
+    tty: true
+    container_name: arch
+    volumes:
+      - .:/opt/arch
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+    networks:
+      - arch-network
+
+  structurizr:
+    image: structurizr/lite
+    ports:
+      - 8082:8080
+    volumes:
+      - ./hl_mai_lab_00:/usr/local/structurizr:z
+    networks:
+      - arch-network
+
+  db:
+    container_name: postgres
+    image: postgres:15
+    environment:
+      - POSTGRES_USER=stud
+      - POSTGRES_PASSWORD=stud
+      - PGDATA=/data/postgres
+      - POSTGRES_DB=archdb
+    volumes:
+      - db:/data/postgres
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -d postgres" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    networks:
+      - arch-network
+
+  cache:
+    image: redis:6.2-alpine
+    restart: always
+    ports:
+      - '6379:6379'
+    command: redis-server --save 20 1 --loglevel warning 
+    networks:
+      - arch-network
+    volumes: 
+      - cache:/data
+      
+  mongo:
+    image: mongo:5.0
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=stud
+      - MONGO_INITDB_ROOT_PASSWORD=stud
+    restart: on-failure
+    volumes:
+      - mongodbdata:/data/db
+    ports:
+      - '27017:27017'
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok' | mongosh localhost:27017/test --quiet
+volumes:
+  db:
+  cache:
+  mongodbdata:
+
+networks:
+  arch-network:
+    driver: "bridge"
+    external: false

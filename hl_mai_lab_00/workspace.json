@@ -1,0 +1,819 @@
+{
+  "id" : 1,
+  "name" : "Умный дом",
+  "description" : "Простая система управления умного дома с базовыми функциями контроля состояния атмосферы в помещении",
+  "lastModifiedDate" : "2024-03-03T10:33:22Z",
+  "lastModifiedAgent" : "structurizr-javascript",
+  "properties" : {
+    "structurizr.dsl" : "d29ya3NwYWNlIHsKICAgIG5hbWUgItCj0LzQvdGL0Lkg0LTQvtC8IgogICAgZGVzY3JpcHRpb24gItCf0YDQvtGB0YLQsNGPINGB0LjRgdGC0LXQvNCwINGD0L/RgNCw0LLQu9C10L3QuNGPINGD0LzQvdC+0LPQviDQtNC+0LzQsCDRgSDQsdCw0LfQvtCy0YvQvNC4INGE0YPQvdC60YbQuNGP0LzQuCDQutC+0L3RgtGA0L7Qu9GPINGB0L7RgdGC0L7Rj9C90LjRjyDQsNGC0LzQvtGB0YTQtdGA0Ysg0LIg0L/QvtC80LXRidC10L3QuNC4IgoKICAgICMg0LLQutC70Y7Rh9Cw0LXQvCDRgNC10LbQuNC8INGBINC40LXRgNCw0YDRhdC40YfQtdGB0LrQvtC5INGB0LjRgdGC0LXQvNC+0Lkg0LjQtNC10L3RgtC40YTQuNC60LDRgtC+0YDQvtCyCiAgICAhaWRlbnRpZmllcnMgaGllcmFyY2hpY2FsCgogICAgIWRvY3MgZG9jdW1lbnRhdGlvbgogICAgIWFkcnMgZGVjaXNpb25zCiAgICAjINCc0L7QtNC10LvRjCDQsNGA0YXQuNGC0LXQutGC0YPRgNGLCiAgICBtb2RlbCB7CgogICAgICAgICMg0J3QsNGB0YLRgNCw0LjQstCw0LXQvCDQstC+0LfQvNC+0LbQvdC+0YHRgtGMINGB0L7Qt9C00LDQvdC40Y8g0LLQu9C+0LbQtdC90L3Ri9GFINCz0YDRg9C/CiAgICAgICAgcHJvcGVydGllcyB7IAogICAgICAgICAgICBzdHJ1Y3R1cml6ci5ncm91cFNlcGFyYXRvciAiLyIKICAgICAgICB9CiAgICAgICAgCgogICAgICAgICMg0J7Qv9C40YHQsNC90LjQtSDQutC+0LzQv9C+0L3QtdC90YIg0LzQvtC00LXQu9C4CiAgICAgICAgdXNlciA9IHBlcnNvbiAi0J/QvtC70YzQt9C+0LLQsNGC0LXQu9GMINGD0LzQvdC+0LPQviDQtNC+0LzQsCIKICAgICAgICBzZW5zb3IgICAgID0gc29mdHdhcmVTeXN0ZW0gItCU0LDRgtGH0LjQuiDRgtC10LzQv9C10YDQsNGC0YPRgNGLIgogICAgICAgIHNtYXJ0X2hvbWUgPSBzb2Z0d2FyZVN5c3RlbSAi0KPQvNC90YvQuSDQtNC+0LwiIHsKICAgICAgICAgICAgZGVzY3JpcHRpb24gItCh0LXRgNCy0LXRgCDRg9C/0YDQsNCy0LvQtdC90LjRjyDRg9C80L3Ri9C8INC00L7QvNC+0LwiCgogICAgICAgICAgICB1c2VyX3NlcnZpY2UgPSBjb250YWluZXIgIlVzZXIgc2VydmljZSIgewogICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gItCh0LXRgNCy0LjRgSDRg9C/0YDQsNCy0LvQtdC90LjRjyDQv9C+0LvRjNC30L7QstCw0YLQtdC70Y/QvNC4IgogICAgICAgICAgICB9CgogICAgICAgICAgICB0ZW1wZXJhdHVyZV9zZXJ2aWNlID0gY29udGFpbmVyICJUZW1wZXJhdHVyZSBzZXJ2aWNlIiB7CiAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAi0KHQtdGA0LLQuNGBINC80L7QvdC40YLQvtGA0LjQvdCz0LAg0Lgg0YPQv9GA0LDQstC70LXQvdC40Y8g0YLQtdC80L/QtdGA0LDRgtGD0YDQvtC5INCyINC00L7QvNC1IgogICAgICAgICAgICB9CgogICAgICAgICAgICBncm91cCAi0KHQu9C+0Lkg0LTQsNC90L3Ri9GFIiB7CiAgICAgICAgICAgICAgICB1c2VyX2RhdGFiYXNlID0gY29udGFpbmVyICJVc2VyIERhdGFiYXNlIiB7CiAgICAgICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gItCR0LDQt9CwINC00LDQvdC90YvRhSDRgSDQv9C+0LvRjNC30L7QstCw0YLQtdC70Y/QvNC4IgogICAgICAgICAgICAgICAgICAgIHRlY2hub2xvZ3kgIlBvc3RncmVTUUwgMTUiCiAgICAgICAgICAgICAgICAgICAgdGFncyAiZGF0YWJhc2UiCiAgICAgICAgICAgICAgICB9CgogICAgICAgICAgICAgICAgdXNlcl9jYWNoZSA9IGNvbnRhaW5lciAiVXNlciBDYWNoZSIgewogICAgICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uICLQmtC10Ygg0L/QvtC70YzQt9C+0LLQsNGC0LXQu9GM0YHQutC40YUg0LTQsNC90L3Ri9GFINC00LvRjyDRg9GB0LrQvtGA0LXQvdC40Y8g0LDRg9GC0LXQvdGC0LjRhNC40LrQsNGG0LjQuCIKICAgICAgICAgICAgICAgICAgICB0ZWNobm9sb2d5ICJQb3N0Z3JlU1FMIDE1IgogICAgICAgICAgICAgICAgICAgIHRhZ3MgImRhdGFiYXNlIgogICAgICAgICAgICAgICAgfQoKICAgICAgICAgICAgICAgIHNtYXJ0aG9tZV9kYXRhYmFzZSA9IGNvbnRhaW5lciAiU21hcnRob21lIERhdGFiYXNlIiB7CiAgICAgICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gItCR0LDQt9CwINC00LDQvdC90YvRhSDQtNC70Y8g0YXRgNCw0L3QtdC90LjRjyDQuNC90YTQvtGA0LzQsNGG0LjQuCDRgSDRgdC10L3RgdC+0YDQvtCyIgogICAgICAgICAgICAgICAgICAgIHRlY2hub2xvZ3kgIk1vbmdvREIgNSIKICAgICAgICAgICAgICAgICAgICB0YWdzICJkYXRhYmFzZSIKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfQoKICAgICAgICAgICAgdXNlcl9zZXJ2aWNlIC0+IHVzZXJfY2FjaGUgItCf0L7Qu9GD0YfQtdC90LjQtS/QvtCx0L3QvtCy0LvQtdC90LjQtSDQtNCw0L3QvdGL0YUg0L4g0L/QvtC70YzQt9C+0LLQsNGC0LXQu9GP0YUiICJUQ1AgNjM3OSIKICAgICAgICAgICAgdXNlcl9zZXJ2aWNlIC0+IHVzZXJfZGF0YWJhc2UgItCf0L7Qu9GD0YfQtdC90LjQtS/QvtCx0L3QvtCy0LvQtdC90LjQtSDQtNCw0L3QvdGL0YUg0L4g0L/QvtC70YzQt9C+0LLQsNGC0LXQu9GP0YUiICJUQ1AgNTQzMiIKCiAgICAgICAgICAgIHRlbXBlcmF0dXJlX3NlcnZpY2UgLT4gc21hcnRob21lX2RhdGFiYXNlICLQn9C+0LvRg9GH0LXQvdC40LUv0L7QsdC90L7QstC70LXQvdC40LUg0LTQsNC90L3Ri9GFINC+INGC0LXQvNC/0LXRgNCw0YLRg9GA0LUiICJUQ1AgMjcwMTgiCiAgICAgICAgICAgIHRlbXBlcmF0dXJlX3NlcnZpY2UgLT4gdXNlcl9zZXJ2aWNlICLQkNGD0YLQtdC90YLQuNGE0LjQutCw0YbQuNGPINC/0L7Qu9GM0LfQvtCy0LDRgtC10LvRjyIgIlJFU1QgSFRUUCA0NDMiCgogICAgICAgICAgICB1c2VyIC0+IHVzZXJfc2VydmljZSAi0KDQtdCz0LjRgdGC0YDQsNGG0LjRjyDQvdC+0LLQvtCz0L4g0L/QvtC70YzQt9C+0LLQsNGC0LXQu9GPIiAiUkVTVCBIVFRQOjgwODAiCiAgICAgICAgICAgIHNlbnNvciAtPiB0ZW1wZXJhdHVyZV9zZXJ2aWNlICLQn9C+0LvRg9GH0LXQvdC40LUg0LTQsNC90L3Ri9GFINC+INGC0LXQvNC/0LXRgNCw0YLRg9GA0LUg0LIg0LTQvtC80LUiICJSRVNUIEhUVFA6ODA4MCIKICAgICAgICB9CgogICAgICAgIHVzZXIgLT4gc21hcnRfaG9tZSAi0KPQv9GA0LDQstC70LXQvdC40LUg0YPRgdGC0YDQvtC50YHRgtCy0LDQvNC4INGD0LzQvdC+0LPQviDQtNC+0LzQsCIKICAgICAgICBzZW5zb3IgLT4gc21hcnRfaG9tZSAi0J7QsdC90L7QstC70LXQvdC40LUg0LDQutGC0YPQsNC70YzQvdGL0YUg0LTQsNC90L3Ri9GFINC+INGC0LXQvNC/0LXRgNCw0YLRg9GA0LUg0LIg0LTQvtC80LUiICJSRVNUIEhUVFA6ODA4MCIKCiAgICAgICAgZGVwbG95bWVudEVudmlyb25tZW50ICJQcm9kdWN0aW9uIiB7CiAgICAgICAgICAgIGRlcGxveW1lbnROb2RlICJVc2VyIFNlcnZlciIgewogICAgICAgICAgICAgICAgY29udGFpbmVySW5zdGFuY2Ugc21hcnRfaG9tZS51c2VyX3NlcnZpY2UKICAgICAgICAgICAgfQoKICAgICAgICAgICAgZGVwbG95bWVudE5vZGUgIlRlbXBlcmF0dXJlIFNlcnZlciIgewogICAgICAgICAgICAgICAgY29udGFpbmVySW5zdGFuY2Ugc21hcnRfaG9tZS50ZW1wZXJhdHVyZV9zZXJ2aWNlCiAgICAgICAgICAgICAgICBwcm9wZXJ0aWVzIHsKICAgICAgICAgICAgICAgICAgICAiY3B1IiAiNCIKICAgICAgICAgICAgICAgICAgICAicmFtIiAiMjU2R2IiCiAgICAgICAgICAgICAgICAgICAgImhkZCIgIjRUYiIKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfQoKICAgICAgICAgICAgZGVwbG95bWVudE5vZGUgImRhdGFiYXNlcyIgewogICAgIAogICAgICAgICAgICAgICAgZGVwbG95bWVudE5vZGUgIkRhdGFiYXNlIFNlcnZlciAxIiB7CiAgICAgICAgICAgICAgICAgICAgY29udGFpbmVySW5zdGFuY2Ugc21hcnRfaG9tZS51c2VyX2RhdGFiYXNlCiAgICAgICAgICAgICAgICB9CgogICAgICAgICAgICAgICAgZGVwbG95bWVudE5vZGUgIkRhdGFiYXNlIFNlcnZlciAyIiB7CiAgICAgICAgICAgICAgICAgICAgY29udGFpbmVySW5zdGFuY2Ugc21hcnRfaG9tZS5zbWFydGhvbWVfZGF0YWJhc2UKICAgICAgICAgICAgICAgICAgICBpbnN0YW5jZXMgMwogICAgICAgICAgICAgICAgfQoKICAgICAgICAgICAgICAgIGRlcGxveW1lbnROb2RlICJDYWNoZSBTZXJ2ZXIiIHsKICAgICAgICAgICAgICAgICAgICBjb250YWluZXJJbnN0YW5jZSBzbWFydF9ob21lLnVzZXJfY2FjaGUKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfQogICAgICAgICAgICAKICAgICAgICB9CiAgICB9CgogICAgdmlld3MgewogICAgICAgIHRoZW1lcyBkZWZhdWx0CgogICAgICAgIHByb3BlcnRpZXMgeyAKICAgICAgICAgICAgc3RydWN0dXJpenIudG9vbHRpcHMgdHJ1ZQogICAgICAgIH0KCgogICAgICAgICFzY3JpcHQgZ3Jvb3Z5IHsKICAgICAgICAgICAgd29ya3NwYWNlLnZpZXdzLmNyZWF0ZURlZmF1bHRWaWV3cygpCiAgICAgICAgICAgIHdvcmtzcGFjZS52aWV3cy52aWV3cy5maW5kQWxsIHsgaXQgaW5zdGFuY2VvZiBjb20uc3RydWN0dXJpenIudmlldy5Nb2RlbFZpZXcgfS5lYWNoIHsgaXQuZW5hYmxlQXV0b21hdGljTGF5b3V0KCkgfQogICAgICAgIH0KCiAgICAgICAgZHluYW1pYyBzbWFydF9ob21lICJVQzAxIiAi0JTQvtCx0LDQstC70LXQvdC40LUg0L3QvtCy0L7Qs9C+INC/0L7Qu9GM0LfQvtCy0LDRgtC10LvRjyIgewogICAgICAgICAgICBhdXRvTGF5b3V0CiAgICAgICAgICAgIHVzZXIgLT4gc21hcnRfaG9tZS51c2VyX3NlcnZpY2UgItCh0L7Qt9C00LDRgtGMINC90L7QstC+0LPQviDQv9C+0LvRjNC30L7QstCw0YLQtdC70Y8gKFBPU1QgL3VzZXIpIgogICAgICAgICAgICBzbWFydF9ob21lLnVzZXJfc2VydmljZSAtPiBzbWFydF9ob21lLnVzZXJfZGF0YWJhc2UgItCh0L7RhdGA0LDQvdC40YLRjCDQtNCw0L3QvdGL0LUg0L4g0L/QvtC70YzQt9C+0LLQsNGC0LXQu9C1IiAKICAgICAgICB9CgogICAgICAgIGR5bmFtaWMgc21hcnRfaG9tZSAiVUMwMiIgItCj0LTQsNC70LXQvdC40LUg0L/QvtC70YzQt9C+0LLQsNGC0LXQu9GPIiB7CiAgICAgICAgICAgIGF1dG9MYXlvdXQKICAgICAgICAgICAgdXNlciAtPiBzbWFydF9ob21lLnVzZXJfc2VydmljZSAi0KPQtNCw0LvQuNGC0Ywg0L3QvtCy0L7Qs9C+INC/0L7Qu9GM0LfQvtCy0LDRgtC10LvRjyAoREVMRVRFIC91c2VyKSIKICAgICAgICAgICAgc21hcnRfaG9tZS51c2VyX3NlcnZpY2UgLT4gc21hcnRfaG9tZS51c2VyX2RhdGFiYXNlICLQo9C00LDQu9C40YLRjCDQtNCw0L3QvdGL0LUg0L4g0L/QvtC70YzQt9C+0LLQsNGC0LXQu9C1IiAKICAgICAgICB9CgogICAgICAgIGR5bmFtaWMgc21hcnRfaG9tZSAiVUMwMyIgItCh0L7RhdGA0LDQvdC40YLRjCDQtNCw0L3QvdGL0LUg0L4g0YLQtdC80L/QtdGA0LDRgtGD0YDQtSIgewogICAgICAgICAgICBhdXRvTGF5b3V0CiAgICAgICAgICAgIHNlbnNvciAtPiBzbWFydF9ob21lLnRlbXBlcmF0dXJlX3NlcnZpY2UgItCh0L7RhdGA0LDQvdC40YLRjCDQtNCw0L3QvdGL0LUg0L4g0YLQtdC80L/QtdGA0LDRgtGD0YDQtSAoUE9TVCAvdXNlcikiCiAgICAgICAgICAgIHNtYXJ0X2hvbWUudGVtcGVyYXR1cmVfc2VydmljZSAtPiBzbWFydF9ob21lLnNtYXJ0aG9tZV9kYXRhYmFzZSAi0KHQvtGF0YDQsNC90LjRgtGMINC00LDQvdC90YvQtSDQviDRgtC10LzQv9C10YDQsNGC0YPRgNC1IiAKICAgICAgICB9CgogICAgICAgIGR5bmFtaWMgc21hcnRfaG9tZSAiVUMwNCIgItCf0L7Qu9GD0YfQuNGC0Ywg0LTQsNC90L3Ri9C1INC+INGC0LXQvNC/0LXRgNCw0YLRg9GA0LUiIHsKICAgICAgICAgICAgYXV0b0xheW91dAogICAgICAgICAgICBzZW5zb3IgLT4gc21hcnRfaG9tZS50ZW1wZXJhdHVyZV9zZXJ2aWNlICLQn9C+0LvRg9GH0LjRgtGMINC00LDQvdC90YvQtSDQviDRgtC10LzQv9C10YDQsNGC0YPRgNC1IChHRVQgL3VzZXIpIgogICAgICAgICAgICBzbWFydF9ob21lLnRlbXBlcmF0dXJlX3NlcnZpY2UgLT4gc21hcnRfaG9tZS51c2VyX3NlcnZpY2UgItCf0YDQvtCy0LXRgNC40YLRjCDQsNGD0YLQtdC90YLQuNGE0LjQutCw0YbQuNGOINC/0L7Qu9GM0LfQvtCy0LDRgtC10LvRjyAoR0VUIC91c2VyKSIKICAgICAgICAgICAgc21hcnRfaG9tZS50ZW1wZXJhdHVyZV9zZXJ2aWNlIC0+IHNtYXJ0X2hvbWUuc21hcnRob21lX2RhdGFiYXNlICLQn9C+0LvRg9GH0LjRgtGMINC00LDQvdC90YvQtSDQviDRgtC10LzQv9C10YDQsNGC0YPRgNC1IiAKICAgICAgICB9CgoKICAgICAgICBzdHlsZXMgewogICAgICAgICAgICBlbGVtZW50ICJkYXRhYmFzZSIgewogICAgICAgICAgICAgICAgc2hhcGUgY3lsaW5kZXIKICAgICAgICAgICAgfQogICAgICAgIH0KICAgIH0KfQo="
+  },
+  "configuration" : { },
+  "model" : {
+    "people" : [ {
+      "id" : "1",
+      "tags" : "Element,Person",
+      "properties" : {
+        "structurizr.dsl.identifier" : "user"
+      },
+      "name" : "Пользователь умного дома",
+      "relationships" : [ {
+        "id" : "13",
+        "tags" : "Relationship",
+        "properties" : {
+          "structurizr.dsl.identifier" : "c1119749-12af-4667-9915-5af40d462ef4"
+        },
+        "sourceId" : "1",
+        "destinationId" : "4",
+        "description" : "Регистрация нового пользователя",
+        "technology" : "REST HTTP:8080"
+      }, {
+        "id" : "14",
+        "sourceId" : "1",
+        "destinationId" : "3",
+        "description" : "Регистрация нового пользователя",
+        "technology" : "REST HTTP:8080",
+        "linkedRelationshipId" : "13"
+      }, {
+        "id" : "17",
+        "tags" : "Relationship",
+        "properties" : {
+          "structurizr.dsl.identifier" : "296c2d0a-4588-4a9b-9f3e-c26f5bae6e7d"
+        },
+        "sourceId" : "1",
+        "destinationId" : "3",
+        "description" : "Управление устройствами умного дома"
+      } ],
+      "location" : "Unspecified"
+    } ],
+    "softwareSystems" : [ {
+      "id" : "3",
+      "tags" : "Element,Software System",
+      "properties" : {
+        "structurizr.dsl.identifier" : "smart_home"
+      },
+      "name" : "Умный дом",
+      "description" : "Сервер управления умным домом",
+      "location" : "Unspecified",
+      "containers" : [ {
+        "id" : "7",
+        "tags" : "Element,Container,database",
+        "properties" : {
+          "structurizr.dsl.identifier" : "smart_home.user_cache"
+        },
+        "name" : "User Cache",
+        "description" : "Кеш пользовательских данных для ускорения аутентификации",
+        "group" : "Слой данных",
+        "technology" : "PostgreSQL 15",
+        "documentation" : { }
+      }, {
+        "id" : "5",
+        "tags" : "Element,Container",
+        "properties" : {
+          "structurizr.dsl.identifier" : "smart_home.temperature_service"
+        },
+        "name" : "Temperature service",
+        "description" : "Сервис мониторинга и управления температурой в доме",
+        "relationships" : [ {
+          "id" : "12",
+          "tags" : "Relationship",
+          "properties" : {
+            "structurizr.dsl.identifier" : "6a089f6a-5d2d-462b-982f-3ddc1d5a3d9a"
+          },
+          "sourceId" : "5",
+          "destinationId" : "4",
+          "description" : "Аутентификация пользователя",
+          "technology" : "REST HTTP 443"
+        }, {
+          "id" : "11",
+          "tags" : "Relationship",
+          "properties" : {
+            "structurizr.dsl.identifier" : "a56ef2dc-85e5-4325-a430-b4c47bceb61f"
+          },
+          "sourceId" : "5",
+          "destinationId" : "8",
+          "description" : "Получение/обновление данных о температуре",
+          "technology" : "TCP 27018"
+        } ],
+        "documentation" : { }
+      }, {
+        "id" : "4",
+        "tags" : "Element,Container",
+        "properties" : {
+          "structurizr.dsl.identifier" : "smart_home.user_service"
+        },
+        "name" : "User service",
+        "description" : "Сервис управления пользователями",
+        "relationships" : [ {
+          "id" : "10",
+          "tags" : "Relationship",
+          "properties" : {
+            "structurizr.dsl.identifier" : "1889086b-9e75-4359-9d06-121d47f34a1c"
+          },
+          "sourceId" : "4",
+          "destinationId" : "6",
+          "description" : "Получение/обновление данных о пользователях",
+          "technology" : "TCP 5432"
+        }, {
+          "id" : "9",
+          "tags" : "Relationship",
+          "properties" : {
+            "structurizr.dsl.identifier" : "1377ab67-25eb-44b5-a5ac-44fe539b0dc6"
+          },
+          "sourceId" : "4",
+          "destinationId" : "7",
+          "description" : "Получение/обновление данных о пользователях",
+          "technology" : "TCP 6379"
+        } ],
+        "documentation" : { }
+      }, {
+        "id" : "8",
+        "tags" : "Element,Container,database",
+        "properties" : {
+          "structurizr.dsl.identifier" : "smart_home.smarthome_database"
+        },
+        "name" : "Smarthome Database",
+        "description" : "База данных для хранения информации с сенсоров",
+        "group" : "Слой данных",
+        "technology" : "MongoDB 5",
+        "documentation" : { }
+      }, {
+        "id" : "6",
+        "tags" : "Element,Container,database",
+        "properties" : {
+          "structurizr.dsl.identifier" : "smart_home.user_database"
+        },
+        "name" : "User Database",
+        "description" : "База данных с пользователями",
+        "group" : "Слой данных",
+        "technology" : "PostgreSQL 15",
+        "documentation" : { }
+      } ],
+      "documentation" : { }
+    }, {
+      "id" : "2",
+      "tags" : "Element,Software System",
+      "properties" : {
+        "structurizr.dsl.identifier" : "sensor"
+      },
+      "name" : "Датчик температуры",
+      "relationships" : [ {
+        "id" : "15",
+        "tags" : "Relationship",
+        "properties" : {
+          "structurizr.dsl.identifier" : "bf0f978b-2abb-447a-8229-4c83e88a95e3"
+        },
+        "sourceId" : "2",
+        "destinationId" : "5",
+        "description" : "Получение данных о температуре в доме",
+        "technology" : "REST HTTP:8080"
+      }, {
+        "id" : "16",
+        "sourceId" : "2",
+        "destinationId" : "3",
+        "description" : "Получение данных о температуре в доме",
+        "technology" : "REST HTTP:8080",
+        "linkedRelationshipId" : "15"
+      }, {
+        "id" : "18",
+        "tags" : "Relationship",
+        "properties" : {
+          "structurizr.dsl.identifier" : "aabc132a-2b58-48c0-b5dd-b443a5528727"
+        },
+        "sourceId" : "2",
+        "destinationId" : "3",
+        "description" : "Обновление актуальных данных о температуре в доме",
+        "technology" : "REST HTTP:8080"
+      } ],
+      "location" : "Unspecified",
+      "documentation" : { }
+    } ],
+    "deploymentNodes" : [ {
+      "id" : "21",
+      "tags" : "Element,Deployment Node",
+      "properties" : {
+        "structurizr.dsl.identifier" : "3b327bbb-cd6c-4f91-8711-ff2fd2b3ef0d.6010b587-e2b0-449d-9734-69fda8933a9a",
+        "cpu" : "4",
+        "hdd" : "4Tb",
+        "ram" : "256Gb"
+      },
+      "name" : "Temperature Server",
+      "environment" : "Production",
+      "instances" : "1",
+      "containerInstances" : [ {
+        "id" : "22",
+        "tags" : "Container Instance",
+        "properties" : {
+          "structurizr.dsl.identifier" : "3b327bbb-cd6c-4f91-8711-ff2fd2b3ef0d.6010b587-e2b0-449d-9734-69fda8933a9a.e45a3134-864a-42f4-81cb-a585af0621a6"
+        },
+        "relationships" : [ {
+          "id" : "23",
+          "sourceId" : "22",
+          "destinationId" : "20",
+          "description" : "Аутентификация пользователя",
+          "technology" : "REST HTTP 443",
+          "linkedRelationshipId" : "12"
+        }, {
+          "id" : "30",
+          "sourceId" : "22",
+          "destinationId" : "29",
+          "description" : "Получение/обновление данных о температуре",
+          "technology" : "TCP 27018",
+          "linkedRelationshipId" : "11"
+        } ],
+        "environment" : "Production",
+        "deploymentGroups" : [ "Default" ],
+        "instanceId" : 1,
+        "containerId" : "5"
+      } ]
+    }, {
+      "id" : "19",
+      "tags" : "Element,Deployment Node",
+      "properties" : {
+        "structurizr.dsl.identifier" : "3b327bbb-cd6c-4f91-8711-ff2fd2b3ef0d.048aea2b-7af3-4ab4-b090-2b455b6a37e0"
+      },
+      "name" : "User Server",
+      "environment" : "Production",
+      "instances" : "1",
+      "containerInstances" : [ {
+        "id" : "20",
+        "tags" : "Container Instance",
+        "properties" : {
+          "structurizr.dsl.identifier" : "3b327bbb-cd6c-4f91-8711-ff2fd2b3ef0d.048aea2b-7af3-4ab4-b090-2b455b6a37e0.c15b1742-a642-4c35-90d3-4bbae4e3262b"
+        },
+        "relationships" : [ {
+          "id" : "27",
+          "sourceId" : "20",
+          "destinationId" : "26",
+          "description" : "Получение/обновление данных о пользователях",
+          "technology" : "TCP 5432",
+          "linkedRelationshipId" : "10"
+        }, {
+          "id" : "33",
+          "sourceId" : "20",
+          "destinationId" : "32",
+          "description" : "Получение/обновление данных о пользователях",
+          "technology" : "TCP 6379",
+          "linkedRelationshipId" : "9"
+        } ],
+        "environment" : "Production",
+        "deploymentGroups" : [ "Default" ],
+        "instanceId" : 1,
+        "containerId" : "4"
+      } ]
+    }, {
+      "id" : "24",
+      "tags" : "Element,Deployment Node",
+      "properties" : {
+        "structurizr.dsl.identifier" : "3b327bbb-cd6c-4f91-8711-ff2fd2b3ef0d.8e472337-aa25-4cf8-847a-d2d80f67a449"
+      },
+      "name" : "databases",
+      "environment" : "Production",
+      "instances" : "1",
+      "children" : [ {
+        "id" : "28",
+        "tags" : "Element,Deployment Node",
+        "properties" : {
+          "structurizr.dsl.identifier" : "3b327bbb-cd6c-4f91-8711-ff2fd2b3ef0d.8e472337-aa25-4cf8-847a-d2d80f67a449.29e330b6-7371-4907-9952-4e995d11f1e0"
+        },
+        "name" : "Database Server 2",
+        "environment" : "Production",
+        "instances" : "3",
+        "containerInstances" : [ {
+          "id" : "29",
+          "tags" : "Container Instance",
+          "properties" : {
+            "structurizr.dsl.identifier" : "3b327bbb-cd6c-4f91-8711-ff2fd2b3ef0d.8e472337-aa25-4cf8-847a-d2d80f67a449.29e330b6-7371-4907-9952-4e995d11f1e0.d78e3686-f1be-45fe-a5a0-083209a99497"
+          },
+          "environment" : "Production",
+          "deploymentGroups" : [ "Default" ],
+          "instanceId" : 1,
+          "containerId" : "8"
+        } ]
+      }, {
+        "id" : "25",
+        "tags" : "Element,Deployment Node",
+        "properties" : {
+          "structurizr.dsl.identifier" : "3b327bbb-cd6c-4f91-8711-ff2fd2b3ef0d.8e472337-aa25-4cf8-847a-d2d80f67a449.183bdd69-5231-4f1f-8fd6-e9473a53a971"
+        },
+        "name" : "Database Server 1",
+        "environment" : "Production",
+        "instances" : "1",
+        "containerInstances" : [ {
+          "id" : "26",
+          "tags" : "Container Instance",
+          "properties" : {
+            "structurizr.dsl.identifier" : "3b327bbb-cd6c-4f91-8711-ff2fd2b3ef0d.8e472337-aa25-4cf8-847a-d2d80f67a449.183bdd69-5231-4f1f-8fd6-e9473a53a971.6272ae2f-9f04-4461-9755-93c02086b37d"
+          },
+          "environment" : "Production",
+          "deploymentGroups" : [ "Default" ],
+          "instanceId" : 1,
+          "containerId" : "6"
+        } ]
+      }, {
+        "id" : "31",
+        "tags" : "Element,Deployment Node",
+        "properties" : {
+          "structurizr.dsl.identifier" : "3b327bbb-cd6c-4f91-8711-ff2fd2b3ef0d.8e472337-aa25-4cf8-847a-d2d80f67a449.e0b5f8b5-5653-4ec8-ac91-ec95f8fb75c6"
+        },
+        "name" : "Cache Server",
+        "environment" : "Production",
+        "instances" : "1",
+        "containerInstances" : [ {
+          "id" : "32",
+          "tags" : "Container Instance",
+          "properties" : {
+            "structurizr.dsl.identifier" : "3b327bbb-cd6c-4f91-8711-ff2fd2b3ef0d.8e472337-aa25-4cf8-847a-d2d80f67a449.e0b5f8b5-5653-4ec8-ac91-ec95f8fb75c6.9f370193-ecbe-4491-b82c-017458c85b57"
+          },
+          "environment" : "Production",
+          "deploymentGroups" : [ "Default" ],
+          "instanceId" : 1,
+          "containerId" : "7"
+        } ]
+      } ]
+    } ],
+    "properties" : {
+      "structurizr.groupSeparator" : "/"
+    }
+  },
+  "documentation" : {
+    "sections" : [ {
+      "content" : "# Какой-то заголовок\n\n\n* Какой-то текст\n* \n![Диаграмма](embed:UC01)",
+      "format" : "Markdown",
+      "filename" : "start.md",
+      "order" : 1,
+      "title" : ""
+    } ],
+    "decisions" : [ {
+      "content" : "# 1. Использование PostgreSQL в качестве основного хранилище данных\n\nDate: 2023-06-06\n\n## Status\n\nAccepted\nAmended by [2. Масштабирование PostgreSQL](#2)\nAmended by [3. Не использование ORM](#3)\n\n\n## Context\n\nДля хранения информации о клиентах, совершаемых платежах, подписках и т.д. необходимо зранить информацию в долговременном носителе;\n\n## Decision\n\nРассматриваемые варианты:\n1. SQL хранилище на основе PostgreSQL 14\n2. NoSQL хранилище на основе MongoDB\n\n**Плюсы решения 1:**\nВозможность совершать запросы к хранилищу по различным критериям (поиск всех клиентов с неоплачеными счетами, различные критерии выбора клиентов и т.д.)\n\n**Минусы решения 1:**\nНеобходимо заранее продумать модель данных, критерии индексирования. Будет затруднено хранение слабоструктурированных данных. Для построения кластера нужно применять внешнее решение (patroni)\n\n**Плюсы решения 2:**\nВозможность менять/расширять модель зранения данных. Высокопроизводительные запросы по ключевым полям. Возможность построения кластера (из коробки)\n\n**Минусы решения 2:**\nПроизвольные запросы по связанным сущностям, будут не так эффективны.\n\n**Выбирается решение 1**\n\n## Consequences\nДля обеспечения отказоустойчивости необходимо отдельно разворачивать кластер на patroni.",
+      "format" : "Markdown",
+      "id" : "1",
+      "title" : "Использование PostgreSQL в качестве основного хранилище данных",
+      "date" : "2023-06-06T00:00:00Z",
+      "status" : "Accepted",
+      "links" : [ {
+        "id" : "2",
+        "description" : "Amended by"
+      }, {
+        "id" : "3",
+        "description" : "Amended by"
+      } ]
+    }, {
+      "content" : "# 2. Репликация хранилища данных на PostgreSQL\n\nDate: 2023-06-06\n\n## Status\n\nAccepted\n\n## Context\n\nДля обеспечения обработки большого количества запросов на чтение данных необходимо разработать стратегию масштабирования хранилища на PostgreSQL\n\n## Decision\n\nРассматриваемые варианты:\n1. Построение репликации Master-Slave\n2. Построение кеширующего слоя на Redis\n\n**Плюсы решения 1:**\nВозможность перенаправлять запросы \"чисто на чтение\" к Slave реплике, снижая нагрузку на master. Возможность увеличивать количество Slave реплик.\n\n**Минусы решения 1:**\nПри увеличении числа запросов на запись такая тактика не поможет снять нагрузку\n\n**Плюсы решения 2:**\nПри реализации паттернов \"сквозное чтение\" и \"сквозная запись\" кластер Redis может помочь снизить нагрузку на систему хранения в PostgreSQL, если в нем сохранять копии основных данных.\n\n**Минусы решения 2:**\nЕсть вероятность того что не получится подобрать оптимальную стратегию кеширования (будет много cache-miss). Не очевидна оптимальная стартегия прогрева кеша.\n\n**Выбирается решение 1**\n\n## Consequences\nДля обеспечения отказоустойчивости необходимо отдельно разворачивать кластер на patroni и осуществить настройку синхронной репликации.\nНа стороне бизнес-логики нужно поддержать разделение запросов на чтение и записиь и обеспечить обращение к разным репликам.",
+      "format" : "Markdown",
+      "id" : "2",
+      "title" : "Репликация хранилища данных на PostgreSQL",
+      "date" : "2023-06-06T00:00:00Z",
+      "status" : "Accepted"
+    }, {
+      "content" : "# 3. Не использование механизмов ORM\n\nDate: 2023-06-07\n\n## Status\n\nProposed\n\n# Context\n\nДля получение/изменение данных в PostgreSQL необходимо выбрать Framework\n\n## Decision\n\nРассматриваемые варианты:\n1. Использование механизмов ORM\n2. Выполнение запросов \"на прямую\" используя ANSI SQL\n3. Реализация слоя хранимых процедур в PostgreSQL\n\n**Плюсы решения 1:**\nПростота разработки\n\n**Минусы решения 1:**\nНе прозрачные механизмы запроса/кеширования данных\n\n**Плюсы решения 2:**\nПоддержка независимости от СУБД\n\n**Минусы решения 2:**\nНеобходимо в коде писать SQL запросы, сложность в разработке и отладке кода.\n\n**Плюсы решения 3:**\nУпрощение читаемости кода backend. Большая производительность запросов за счет возможной предкомпиляции запросов на стороне PostgreSQL.\n\n**Минусы решения 3:**\nЗависимость от производителя СУБД.\n\n**Выполнение запросов \"на прямую\" используя ANSI SQL**\n\n## Consequences\nНеобходимо в бизнес-логике создать слой абстракции над базой данных, которая будет осуществлять запросы и хранить \"код на SQL\"",
+      "format" : "Markdown",
+      "id" : "3",
+      "title" : "Не использование механизмов ORM",
+      "date" : "2023-06-07T00:00:00Z",
+      "status" : "Proposed"
+    }, {
+      "content" : "# Выбор модели авторизации на основе JWT токенов\n\nDate: 2023-06-16\n\n## Status\n\nDraft\n\n## Context\n\nДля обеспечения конфеденциальности и целостности данных приложения, а так же для предотвращения неправомерного использования дронов для слежения необходимо реализовать механизмы аутентификации и атворизации\n\n\n\n## Decision\n### [Использование авторизации на основе Kerberos](https://confluence.veon.com/pages/viewpage.action?pageId=316619410)\n**Плюсы**\nИнтеграция с доменом LDAP. Простой и надежный механизм, поддерживаемый во всех framework-ах\n**Минусы**\nДополнительные запросы на обмен сеансовыми ключами.\n\n### Использование авторизации на основе JWT-токенов\n**Плюсы**\nПоддержка сторонных провайдеров аутентификации, например, по протоколу OAuth 2.0. Упрощение взаимодействия (токены могут валидироваться каждым сервисом самостоятельно)\n\n**Минусы**\nСложность с отзывом токенов в случае его компрометации или \"закрытия\" пользователя.\n\n**Выбирается решение на основе Kerberos**\n## Consequences\n* Необходимо во всех фронтовых сервисах поддержать механизм аутентификации на основе Kerberos. \n* Необходимо обеспечить пробрасывание контекста безопасности во все внутренние системы для целей аудита и авторизациии.\n",
+      "format" : "Markdown",
+      "id" : "4",
+      "title" : " Выбор модели авторизации на основе JWT токенов",
+      "date" : "2023-06-16T00:00:00Z",
+      "status" : "Draft"
+    } ]
+  },
+  "views" : {
+    "systemLandscapeViews" : [ {
+      "key" : "SystemLandscape-001",
+      "generatedKey" : true,
+      "order" : 1,
+      "dimensions" : {
+        "width" : 1850,
+        "height" : 1400
+      },
+      "automaticLayout" : {
+        "implementation" : "Dagre",
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "nodeSeparation" : 600,
+        "edgeSeparation" : 200,
+        "vertices" : false,
+        "applied" : false
+      },
+      "enterpriseBoundaryVisible" : true,
+      "elements" : [ {
+        "id" : "1",
+        "x" : 1250,
+        "y" : 199
+      }, {
+        "id" : "2",
+        "x" : 200,
+        "y" : 249
+      }, {
+        "id" : "3",
+        "x" : 712,
+        "y" : 899
+      } ],
+      "relationships" : [ {
+        "id" : "18"
+      }, {
+        "id" : "17"
+      }, {
+        "id" : "16"
+      }, {
+        "id" : "14"
+      } ]
+    } ],
+    "systemContextViews" : [ {
+      "key" : "SystemContext-001",
+      "generatedKey" : true,
+      "order" : 2,
+      "softwareSystemId" : "2",
+      "dimensions" : {
+        "width" : 850,
+        "height" : 1300
+      },
+      "automaticLayout" : {
+        "implementation" : "Dagre",
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "nodeSeparation" : 600,
+        "edgeSeparation" : 200,
+        "vertices" : false,
+        "applied" : false
+      },
+      "enterpriseBoundaryVisible" : true,
+      "elements" : [ {
+        "id" : "2",
+        "x" : 200,
+        "y" : 199
+      }, {
+        "id" : "3",
+        "x" : 200,
+        "y" : 799
+      } ],
+      "relationships" : [ {
+        "id" : "18"
+      }, {
+        "id" : "16"
+      } ]
+    }, {
+      "key" : "SystemContext-002",
+      "generatedKey" : true,
+      "order" : 3,
+      "softwareSystemId" : "3",
+      "dimensions" : {
+        "width" : 1850,
+        "height" : 1400
+      },
+      "automaticLayout" : {
+        "implementation" : "Dagre",
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "nodeSeparation" : 600,
+        "edgeSeparation" : 200,
+        "vertices" : false,
+        "applied" : false
+      },
+      "enterpriseBoundaryVisible" : true,
+      "elements" : [ {
+        "id" : "1",
+        "x" : 1249,
+        "y" : 200
+      }, {
+        "id" : "2",
+        "x" : 199,
+        "y" : 250
+      }, {
+        "id" : "3",
+        "x" : 711,
+        "y" : 900
+      } ],
+      "relationships" : [ {
+        "id" : "18"
+      }, {
+        "id" : "17"
+      }, {
+        "id" : "16"
+      }, {
+        "id" : "14"
+      } ]
+    } ],
+    "containerViews" : [ {
+      "key" : "Container-001",
+      "generatedKey" : true,
+      "order" : 4,
+      "softwareSystemId" : "3",
+      "dimensions" : {
+        "width" : 4390,
+        "height" : 3065
+      },
+      "automaticLayout" : {
+        "implementation" : "Dagre",
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "nodeSeparation" : 600,
+        "edgeSeparation" : 200,
+        "vertices" : false,
+        "applied" : false
+      },
+      "externalSoftwareSystemBoundariesVisible" : false,
+      "elements" : [ {
+        "id" : "1",
+        "x" : 200,
+        "y" : 950
+      }, {
+        "id" : "2",
+        "x" : 3600,
+        "y" : 200
+      }, {
+        "id" : "4",
+        "x" : 2125,
+        "y" : 1650
+      }, {
+        "id" : "5",
+        "x" : 3600,
+        "y" : 1000
+      }, {
+        "id" : "6",
+        "x" : 1600,
+        "y" : 2400
+      }, {
+        "id" : "7",
+        "x" : 2650,
+        "y" : 2400
+      }, {
+        "id" : "8",
+        "x" : 3700,
+        "y" : 2400
+      } ],
+      "relationships" : [ {
+        "id" : "15"
+      }, {
+        "id" : "13"
+      }, {
+        "id" : "12"
+      }, {
+        "id" : "11"
+      }, {
+        "id" : "9"
+      }, {
+        "id" : "10"
+      } ]
+    } ],
+    "dynamicViews" : [ {
+      "key" : "UC04",
+      "order" : 9,
+      "description" : "Получить данные о температуре",
+      "automaticLayout" : {
+        "implementation" : "Graphviz",
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "nodeSeparation" : 300,
+        "edgeSeparation" : 0,
+        "vertices" : false,
+        "applied" : false
+      },
+      "elementId" : "3",
+      "externalBoundariesVisible" : false,
+      "relationships" : [ {
+        "id" : "15",
+        "description" : "Получить данные о температуре (GET /user)",
+        "order" : "1",
+        "response" : false
+      }, {
+        "id" : "12",
+        "description" : "Проверить аутентификацию пользователя (GET /user)",
+        "order" : "2",
+        "response" : false
+      }, {
+        "id" : "11",
+        "description" : "Получить данные о температуре",
+        "order" : "3",
+        "response" : false
+      } ],
+      "elements" : [ {
+        "id" : "2",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "4",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "5",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "8",
+        "x" : 0,
+        "y" : 0
+      } ]
+    }, {
+      "key" : "UC02",
+      "order" : 7,
+      "description" : "Удаление пользователя",
+      "dimensions" : {
+        "width" : 930,
+        "height" : 2065
+      },
+      "automaticLayout" : {
+        "implementation" : "Graphviz",
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "nodeSeparation" : 300,
+        "edgeSeparation" : 0,
+        "vertices" : false,
+        "applied" : true
+      },
+      "elementId" : "3",
+      "externalBoundariesVisible" : false,
+      "relationships" : [ {
+        "id" : "13",
+        "description" : "Удалить нового пользователя (DELETE /user)",
+        "order" : "1",
+        "response" : false
+      }, {
+        "id" : "10",
+        "description" : "Удалить данные о пользователе",
+        "order" : "2",
+        "response" : false
+      } ],
+      "elements" : [ {
+        "id" : "1",
+        "x" : 239,
+        "y" : 200
+      }, {
+        "id" : "4",
+        "x" : 239,
+        "y" : 800
+      }, {
+        "id" : "6",
+        "x" : 239,
+        "y" : 1400
+      } ]
+    }, {
+      "key" : "UC01",
+      "order" : 6,
+      "description" : "Добавление нового пользователя",
+      "automaticLayout" : {
+        "implementation" : "Graphviz",
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "nodeSeparation" : 300,
+        "edgeSeparation" : 0,
+        "vertices" : false,
+        "applied" : false
+      },
+      "elementId" : "3",
+      "externalBoundariesVisible" : false,
+      "relationships" : [ {
+        "id" : "13",
+        "description" : "Создать нового пользователя (POST /user)",
+        "order" : "1",
+        "response" : false
+      }, {
+        "id" : "10",
+        "description" : "Сохранить данные о пользователе",
+        "order" : "2",
+        "response" : false
+      } ],
+      "elements" : [ {
+        "id" : "1",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "4",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "6",
+        "x" : 0,
+        "y" : 0
+      } ]
+    }, {
+      "key" : "UC03",
+      "order" : 8,
+      "description" : "Сохранить данные о температуре",
+      "automaticLayout" : {
+        "implementation" : "Graphviz",
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "nodeSeparation" : 300,
+        "edgeSeparation" : 0,
+        "vertices" : false,
+        "applied" : false
+      },
+      "elementId" : "3",
+      "externalBoundariesVisible" : false,
+      "relationships" : [ {
+        "id" : "15",
+        "description" : "Сохранить данные о температуре (POST /user)",
+        "order" : "1",
+        "response" : false
+      }, {
+        "id" : "11",
+        "description" : "Сохранить данные о температуре",
+        "order" : "2",
+        "response" : false
+      } ],
+      "elements" : [ {
+        "id" : "2",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "5",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "8",
+        "x" : 0,
+        "y" : 0
+      } ]
+    } ],
+    "deploymentViews" : [ {
+      "key" : "Deployment-001",
+      "generatedKey" : true,
+      "order" : 5,
+      "softwareSystemId" : "3",
+      "automaticLayout" : {
+        "implementation" : "Dagre",
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "nodeSeparation" : 600,
+        "edgeSeparation" : 200,
+        "vertices" : false,
+        "applied" : false
+      },
+      "environment" : "Production",
+      "elements" : [ {
+        "id" : "22",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "24",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "25",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "26",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "28",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "29",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "19",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "20",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "31",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "21",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "32",
+        "x" : 0,
+        "y" : 0
+      } ],
+      "relationships" : [ {
+        "id" : "27"
+      }, {
+        "id" : "23"
+      }, {
+        "id" : "33"
+      }, {
+        "id" : "30"
+      } ]
+    } ],
+    "configuration" : {
+      "branding" : { },
+      "styles" : {
+        "elements" : [ {
+          "tag" : "database",
+          "shape" : "Cylinder"
+        } ]
+      },
+      "themes" : [ "https://static.structurizr.com/themes/default/theme.json" ],
+      "terminology" : { },
+      "metadataSymbols" : "SquareBrackets",
+      "lastSavedView" : "UC02",
+      "properties" : {
+        "structurizr.tooltips" : "true"
+      }
+    }
+  }
+}

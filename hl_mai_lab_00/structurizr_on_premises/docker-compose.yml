@@ -1,0 +1,17 @@
+version: '3.3'
+services:
+  structurizr-onpremises:
+    image: structurizr/onpremises
+    container_name: structurizr-onpremises
+    ports:
+      - 8081:8080
+    volumes:
+        - ./onpremises:/usr/local/structurizr:z
+  # plantuml-server:
+  #   image: plantuml/plantuml-server:tomcat
+  #   container_name: plantuml-server
+  #   ports:
+  #     - 8082:8080
+  #   environment:
+  #     - BASE_URL=plantuml
+

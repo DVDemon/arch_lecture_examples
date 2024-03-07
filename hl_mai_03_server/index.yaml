@@ -1,0 +1,74 @@
+openapi: '3.0.0'
+info:
+  version: '1.0.0'
+  title: 'Sample Server'
+  description: Demo of REST API
+servers:
+  - url: http://localhost:8080
+    description: Sample server
+paths:
+  /request:
+    get:
+      summary: Read a session
+      parameters:
+        - in: query
+          name: session_id
+          description: The unique identifier of some session
+          required: true
+          schema:
+            $ref: '#/components/schemas/SessionId'
+      responses:
+        '200':
+          description: The session corresponding to the provided `sessionId`
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sessions'
+        404:
+          description: No session found for the provided `spacecraftId`
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        500:
+          description: Unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+components:
+  schemas:
+    SessionId:
+      description: The unique identifier of a session
+      type: string
+    
+    Sessions:
+      type: array
+      items:
+        $ref: '#/components/schemas/Session'
+
+    Session:
+      type: object
+      required:
+        - id
+        - some_text
+      properties:
+        id:
+          $ref: '#/components/schemas/SessionId'
+        some_text:
+          type: string
+    Error:
+      type: object
+      required:
+        - message
+      properties:
+        message:
+          description: A human readable error message
+          type: string
+  securitySchemes:
+    ApiKey:
+      type: apiKey
+      in: header
+      name: X-Api-Key
+security:
+  - ApiKey: []
