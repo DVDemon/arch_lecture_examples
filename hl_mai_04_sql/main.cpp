@@ -4,6 +4,7 @@
 
 #include <Poco/Data/PostgreSQL/Connector.h>
 #include <Poco/Data/PostgreSQL/PostgreSQLException.h>
+
 #include <Poco/Data/SessionFactory.h>
 #include <Poco/Data/RecordSet.h>
 
