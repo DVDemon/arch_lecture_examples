@@ -1,0 +1,50 @@
+version: '3.2'
+services:
+  lab_01:
+    tty: true
+    container_name: lab_01
+    build:
+      context: .
+      dockerfile: lab_01_dockerfile
+    environment:
+      - DB_HOST=lab01_postgres
+      - DB_PORT=5432
+      - DB_LOGIN=stud
+      - DB_PASSWORD=stud
+      - DB_DATABASE=archdb
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - 8080:8080
+    networks:
+      - lab01-network
+  db:
+    container_name: lab01_postgres
+    image: postgres:15
+    environment:
+      - POSTGRES_USER=stud
+      - POSTGRES_PASSWORD=stud
+      - PGDATA=/data/postgres
+      - POSTGRES_DB=archdb
+    volumes:
+      - lab01_db:/data/postgres
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -d postgres" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    networks:
+      - lab01-network
+  
+volumes:
+  lab01_db:
+
+
+networks:
+  lab01-network:
+    driver: "bridge"
+    external: false
