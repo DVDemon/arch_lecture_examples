@@ -16,7 +16,7 @@ struct Client {
      void changeName(const std::string& firstName, const std::string&  lastName) {}
      void relocateTo(const Address& address) {}
      void changePhoneNumber(const Telephone& telephone){}
-     void emailAddress(const EmailAddress& emailAddress){}
+     void changeEmailAddress(const EmailAddress& emailAddress){}
 };
 struct ClientService {
     void changeClientPhoneNumber(const std::string& clientId, const Telephone& telephone) {
