@@ -44,6 +44,8 @@ RUN git clone https://github.com/tdv/redis-cpp.git &&\
     sudo make install &&\
     cd .. 
 
+RUN ldconfig
+
 WORKDIR /opt/arch
 
 ENTRYPOINT ["/usr/bin/bash"]

@@ -11,8 +11,8 @@ SELECT * from Author;
 
 select NEXTVAL('ids');
 
-INSERT INTO Author(id,first_name,last_name,email,title) VALUES ( NEXTVAL('ids'),'Petr','Petrov','pp@yandex.r
-u','mr');
+INSERT INTO Author(id,first_name,last_name,email,title) 
+VALUES ( NEXTVAL('ids'),'Petr','Petrov','pp@yandex.ru','mr');
 
 INSERT INTO Author(id,first_name,last_name,email,title) VALUES ( NEXTVAL('ids'),'Andr','Ezhoff','pp@yandex.
 ru','mr');

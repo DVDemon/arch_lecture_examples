@@ -8,7 +8,7 @@
 #include <Poco/Data/SessionFactory.h>
 #include <Poco/Data/RecordSet.h>
 
-auto main(int argc, char *argv[]) -> int
+int main(int argc, char *argv[]) 
 {
     if (argc < 3)
     {
@@ -53,9 +53,9 @@ auto main(int argc, char *argv[]) -> int
 
         Poco::Data::Statement insert(session);
 
-        std::string first_name{"Ivan"};
-        std::string last_name{"Ivanov"};
-        std::string email{"ivanov@ivan.ru"};
+        std::string first_name{"Sidr"};
+        std::string last_name{"Sidrov"};
+        std::string email{"ss@ivan.ru"};
         std::string title{"mister"};
 
         insert << "INSERT INTO Author (id,first_name,last_name,email,title) VALUES( NEXTVAL('Ids'),$1, $2, $3, $4)",
@@ -87,11 +87,11 @@ auto main(int argc, char *argv[]) -> int
         };
 
 
-        Poco::Data::Statement ids(session);
-        ids << "SELECT NEXTVAL('Ids')", Poco::Data::Keywords::into(id); 
-        if(!ids.done())
-            if(ids.execute())
-                std::cout << "next_sequence:" << id << std::endl;
+        // Poco::Data::Statement ids(session);
+        // ids << "SELECT NEXTVAL('Ids')", Poco::Data::Keywords::into(id); 
+        // if(!ids.done())
+        //     if(ids.execute())
+        //         std::cout << "next_sequence:" << id << std::endl;
             
         
     }
@@ -112,5 +112,5 @@ auto main(int argc, char *argv[]) -> int
     {
         std::cout << "exception:" << ex->what() << std::endl;
     }
-    return 1;
+    return 0;
 }

@@ -9,4 +9,4 @@ df.to_sql("users", con=engine, if_exists = 'replace', index=False)
 # ALTER TABLE "users" ADD COLUMN id SERIAL PRIMARY KEY
 # UPDATE "users" SET login=email
 # explain select * from users where first_name='Alan';
-# create index fnu on users(first_name);
+# create index fn on users(first_name);
