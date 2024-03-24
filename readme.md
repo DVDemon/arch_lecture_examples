@@ -42,3 +42,9 @@
 
 * Понятие событийно-ориентированной архитектуры. Свойства брокеров сообщений. Паттерн CQRS. Применение очередей: buffer dispatcher, transport, balancer.
 * Понятие событийно-ориентированной архитектуры. Брокеры сообщений: RabbitMQ и Apache Kafka – особенности и свойства. 
+
+<!-- db.createUser({
+  user: 'stud',
+  pwd: 'stud',
+  roles: [{ role: 'userAdminAnyDatabase', db: 'arch' }],
+}); -->

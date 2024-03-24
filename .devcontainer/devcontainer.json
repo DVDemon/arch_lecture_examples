@@ -42,7 +42,8 @@
 				"ms-vscode.cpptools-extension-pack",
 				"ckolkman.vscode-postgres",
 				"cweijan.vscode-redis-client",
-				"42crunch.vscode-openapi"
+				"42crunch.vscode-openapi",
+				"mongodb.mongodb-vscode"
 			]
 		}
 	},

@@ -1,4 +1,4 @@
-version: '3.2'
+version: '3.7'
 services:
   arch:
     tty: true
@@ -56,12 +56,17 @@ services:
       
   mongo:
     image: mongo:5.0
-    environment:
-      - MONGO_INITDB_ROOT_USERNAME=stud
-      - MONGO_INITDB_ROOT_PASSWORD=stud
+    container_name: mongodb
+    #environment:
+      # MONGO_INITDB_ROOT_USERNAME: stud
+      # MONGO_INITDB_ROOT_PASSWORD: stud
+      # MONGO_INITDB_ROOT_DATABASE: arch
     restart: on-failure
+    networks:
+      - arch-network
     volumes:
       - mongodbdata:/data/db
+      - ./mongo-init.sh:/docker-entrypoint-initdb.d/mongo-init.sh:ro
     ports:
       - '27017:27017'
     healthcheck:
