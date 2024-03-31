@@ -44,7 +44,8 @@
 				"cweijan.vscode-redis-client",
 				"42crunch.vscode-openapi",
 				"mongodb.mongodb-vscode",
-				"systemticks.c4-dsl-extension"
+				"systemticks.c4-dsl-extension",
+				"humao.rest-client"
 			]
 		}
 	},

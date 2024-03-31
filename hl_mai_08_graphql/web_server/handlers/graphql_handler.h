@@ -67,6 +67,7 @@ public:
 
             std::istream_iterator<char> start{request.stream() >> std::noskipws}, end{};
             std::string input{start, end};
+            std::cout << input << std::endl;
 
             query = graphql::peg::parseString(std::move(input));
 

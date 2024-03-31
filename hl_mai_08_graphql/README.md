@@ -105,6 +105,9 @@ type User  {
 #### Поиск по маске
 
 ```graphql
+POST http://localhost:8080/query
+Content-Type: text/plain
+
 query {
     search(term1:"I%", term2:"I%"){
         id,
@@ -121,6 +124,9 @@ query {
 #### Поиск всех
 
 ```graphql
+POST http://localhost:8080/query
+Content-Type: text/plain
+
 query {
     all_users{
         id,
@@ -137,6 +143,9 @@ query {
 #### Поиск по id
 
 ```graphql
+POST http://localhost:8080/query
+Content-Type: text/plain
+
 query {
     get_user(id:1){
         id,
@@ -153,6 +162,9 @@ query {
 #### Добавление 
 
 ```graphql
+POST http://localhost:8080/query
+Content-Type: text/plain
+
 mutation{
     add_user(first_name: "Ivan",
                    last_name: "Ivanov",
