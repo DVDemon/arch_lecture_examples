@@ -43,7 +43,8 @@
 				"ckolkman.vscode-postgres",
 				"cweijan.vscode-redis-client",
 				"42crunch.vscode-openapi",
-				"mongodb.mongodb-vscode"
+				"mongodb.mongodb-vscode",
+				"systemticks.c4-dsl-extension"
 			]
 		}
 	},

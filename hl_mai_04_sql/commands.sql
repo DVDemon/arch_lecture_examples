@@ -36,3 +36,7 @@ drop index fn_ln;
 create index fn_ln on Author(first_name,last_name);
 
 SELECT * FROM Author WHERE first_name LIKE 'P%' OR last_name LIKE 'E%';
+
+
+create index users_fn_ln on Users(first_name text_pattern_ops, last_name text_pattern_ops);
+explain select * from Users where first_name ^@ 'Car%' and last_name ^@ 'L%';

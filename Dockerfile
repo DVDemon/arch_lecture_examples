@@ -44,6 +44,46 @@ RUN git clone https://github.com/tdv/redis-cpp.git &&\
     sudo make install &&\
     cd .. 
 
+RUN git clone --recurse-submodules -b v1.43.0 https://github.com/grpc/grpc &&\
+    cd grpc &&\
+    mkdir -p cmake/build &&\
+    cd cmake/build &&\
+    cmake -DgRPC_INSTALL=ON  -DgRPC_BUILD_TESTS=OFF ../.. &&\
+    make &&\
+    make install &&\
+    cd .. &&\
+    cd ..
+
+RUN git clone https://github.com/Tencent/rapidjson.git &&\
+    cd rapidjson &&\
+    mkdir build &&\
+    cd build &&\
+    cmake .. &&\
+    make &&\
+    make install &&\
+    cd .. &&\
+    cd ..
+
+RUN git clone --recurse-submodules https://github.com/taocpp/PEGTL.git &&\
+    cd PEGTL &&\
+    mkdir build &&\
+    cd build &&\
+    cmake .. &&\
+    make &&\
+    make install &&\
+    cd .. &&\
+    cd ..
+
+RUN git clone --recurse-submodules https://github.com/microsoft/cppgraphqlgen.git &&\
+    cd cppgraphqlgen &&\
+    mkdir build &&\
+    cd build &&\
+    cmake -D GRAPHQL_BUILD_TESTS=OFF .. &&\
+    make &&\
+    make install &&\
+    cd .. &&\
+    cd ..
+
 RUN ldconfig
 
 WORKDIR /opt/arch
