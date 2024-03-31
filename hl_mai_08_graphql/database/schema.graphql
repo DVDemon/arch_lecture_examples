@@ -1,0 +1,29 @@
+schema {
+  query: Query
+  mutation: Mutations
+}
+
+type Mutations{
+  add_user(first_name: String!,
+            last_name: String!,
+            email: String!,
+            title: String!,
+            login: String!,
+            password: String!) : String!
+}
+
+type Query {
+  get_user(id: Int): User
+  all_users: [User]
+  search(term1: String!,term2: String!): [User!]!
+}
+
+type User  {
+  id: Int
+  first_name:String!
+  last_name:String!
+  email:String!
+  title:String!
+  login:String!
+  password:String!
+}
