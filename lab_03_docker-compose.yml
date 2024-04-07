@@ -1,0 +1,94 @@
+version: '3.2'
+services:
+  lab_03_user:
+    tty: true
+    container_name: lab_03_user
+    build:
+      context: .
+      dockerfile: lab_03_dockerfile
+    environment:
+      - DB_HOST=lab03_postgres
+      - DB_PORT=5432
+      - DB_LOGIN=stud
+      - DB_PASSWORD=stud
+      - DB_DATABASE=archdb
+      - MONGO_HOST=mongodb_lab3
+      - MONGO_PORT=27017
+      - MONGO_DATABASE=arch
+      - JWT_KEY=0123456789ABCDEF0123456789ABCDEF
+    depends_on:
+      db_lab3:
+        condition: service_healthy
+    ports:
+      - 8080:8080
+    networks:
+      - lab03-network
+
+  lab_03_pizza:
+    tty: true
+    container_name: lab_03_pizza
+    build:
+      context: .
+      dockerfile: lab_03_dockerfile
+    environment:
+      - DB_HOST=lab03_postgres
+      - DB_PORT=5432
+      - DB_LOGIN=stud
+      - DB_PASSWORD=stud
+      - DB_DATABASE=archdb
+      - MONGO_HOST=mongodb_lab2
+      - MONGO_PORT=27017
+      - MONGO_DATABASE=arch
+      - JWT_KEY=0123456789ABCDEF0123456789ABCDEF
+    depends_on:
+      db_lab3:
+        condition: service_healthy
+    ports:
+      - 8081:8080
+    networks:
+      - lab03-network
+
+  db_lab3:
+    container_name: lab03_postgres
+    image: postgres:15
+    environment:
+      - POSTGRES_USER=stud
+      - POSTGRES_PASSWORD=stud
+      - PGDATA=/data/postgres
+      - POSTGRES_DB=archdb
+    volumes:
+      - lab03_db:/data/postgres
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -d postgres" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    networks:
+      - lab03-network
+
+  mongodb_lab3:
+    image: mongo:5.0
+    container_name: mongodb_lab2
+    restart: on-failure
+    networks:
+      - lab03-network
+    volumes:
+      - mongodbdata_lab3:/data/db
+      - ./mongo-init.sh:/docker-entrypoint-initdb.d/mongo-init.sh:ro
+    ports:
+      - '27017:27017'
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok' | mongosh localhost:27017/test --quiet
+
+volumes:
+  lab03_db:
+  mongodbdata_lab3:
+
+
+networks:
+  lab03-network:
+    driver: "bridge"
+    external: false
