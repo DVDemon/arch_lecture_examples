@@ -1,0 +1,1 @@
+wrk -d 60 -t 10 -c 10 --latency -s ./get.lua http://localhost:8080

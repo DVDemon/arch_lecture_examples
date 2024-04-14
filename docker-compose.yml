@@ -71,6 +71,25 @@ services:
       - '27017:27017'
     healthcheck:
       test: echo 'db.runCommand("ping").ok' | mongosh localhost:27017/test --quiet
+
+  grafana-01:
+    image: grafana/grafana
+    container_name: grafana-01
+    ports:
+      - 3000:3000
+    networks:
+      - arch-network
+  
+  prometheus-01:
+    image: prom/prometheus
+    container_name: prometheus-01
+    ports:
+      - 9090:9090
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    networks:
+      - arch-network
+
 volumes:
   db:
   cache:
