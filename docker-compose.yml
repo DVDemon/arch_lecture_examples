@@ -10,6 +10,7 @@ services:
       dockerfile: Dockerfile
     ports:
       - 8080:8080
+      - 8888:8888
     networks:
       - arch-network
 
@@ -44,6 +45,7 @@ services:
       - arch-network
 
   cache:
+    container_name: cache
     image: redis:6.2-alpine
     restart: always
     ports:

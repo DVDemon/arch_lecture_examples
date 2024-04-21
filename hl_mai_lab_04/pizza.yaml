@@ -1,0 +1,241 @@
+openapi: '3.0.0'
+info:
+  version: '1.0.0'
+  title: 'Arch Lab Example API'
+  description: Пример API для первого домашнего задания по курсу Архитектура программных систем
+servers:
+  - url: http://localhost:8888
+    description: Example server
+paths:
+  /orders:
+    get:
+      summary: Чтение информации о заказе
+      responses:
+        '200':
+          description: Заказы для пользователя
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/orders'
+        404:
+          description: Пользователь не найден
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        500:
+          description: Неожиданная ошибка
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /order:
+    get:
+      summary: Чтение информации о заказе
+      parameters:
+      - name: id
+        description: Уникальный идентификатор заказа
+        in: query
+        required: false
+        schema:
+          $ref: '#/components/schemas/id'
+      responses:
+        '200':
+          description: Найденный пользователь
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/order'
+        404:
+          description: Пользователь не найден
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        500:
+          description: Неожиданная ошибка
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    put:
+      summary: Обновление информации о заказе
+      parameters:
+      - name: id
+        description: Идентификатор заказа
+        in: query
+        required: true
+        schema:
+          type: integer
+          default: 1
+      - name: type
+        description: Тип пиццы
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: count
+        description: Количество пицц 
+        in: query
+        required: true
+        schema:
+          type: integer
+      - name: price
+        description: Стоимость заказа
+        in: query
+        required: true
+        schema:
+          type: integer
+      - name: city
+        description: Город пользователя
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: country
+        description: Страна пользователя
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: street
+        description: Адрес пользователя
+        in: query
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Идентификатор, добавленного пользователя
+          content:
+            application/json:
+              schema:
+                type: integer
+        404:
+          description: Ошибка добавления пользователя
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        500:
+          description: Неожиданная ошибка
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    post:
+      summary: Добавление нового заказа
+      parameters:
+      - name: id
+        description: Идентификатор заказа
+        in: query
+        required: true
+        schema:
+          type: integer
+          default: 1
+      - name: type
+        description: Тип пиццы
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: count
+        description: Количество пицц 
+        in: query
+        required: true
+        schema:
+          type: integer
+      - name: price
+        description: Стоимость заказа
+        in: query
+        required: true
+        schema:
+          type: integer
+      - name: city
+        description: Город пользователя
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: country
+        description: Страна пользователя
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: street
+        description: Адрес пользователя
+        in: query
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Идентификатор, добавленного пользователя
+          content:
+            application/json:
+              schema:
+                type: integer
+        404:
+          description: Ошибка добавления пользователя
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        500:
+          description: Неожиданная ошибка
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+components:
+  schemas:
+    id:
+      description: Уникальный идентификатор
+      type: integer
+    orders:
+      type: array
+      items:
+        $ref: '#/components/schemas/order'
+    order:
+      type: object
+      properties:
+        id:
+          type: integer
+        user_id:
+          type: integer
+        type:
+          type: string
+        count:
+          type: integer
+        price:
+          type: integer
+        address:
+          type: object
+          properties:
+            city:
+              type: string
+            country:
+              type: string
+            street:
+              type: string
+
+    Error:
+      type: object
+      required:
+        - message
+      properties:
+        message:
+          description: Сообщение о ошибке
+          type: string
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+    basicAuth:     
+      type: http
+      scheme: basic
+security:
+  - bearerAuth: []
+  - basicAuth: []
