@@ -36,7 +36,7 @@ services:
       - DB_LOGIN=stud
       - DB_PASSWORD=stud
       - DB_DATABASE=archdb
-      - MONGO_HOST=mongodb_lab2
+      - MONGO_HOST=mongodb_lab3
       - MONGO_PORT=27017
       - MONGO_DATABASE=arch
       - JWT_KEY=0123456789ABCDEF0123456789ABCDEF
@@ -71,7 +71,7 @@ services:
 
   mongodb_lab3:
     image: mongo:5.0
-    container_name: mongodb_lab2
+    container_name: mongodb_lab3
     restart: on-failure
     networks:
       - lab03-network

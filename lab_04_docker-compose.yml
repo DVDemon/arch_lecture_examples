@@ -1,0 +1,133 @@
+version: '3.2'
+services:
+  lab_04_user:
+    tty: true
+    container_name: lab_04_user
+    build:
+      context: .
+      dockerfile: lab_04_dockerfile
+    environment:
+      - DB_HOST=lab04_postgres
+      - DB_PORT=5432
+      - DB_LOGIN=stud
+      - DB_PASSWORD=stud
+      - DB_DATABASE=archdb
+      - MONGO_HOST=mongodb_lab4
+      - MONGO_PORT=27017
+      - MONGO_DATABASE=arch
+      - JWT_KEY=0123456789ABCDEF0123456789ABCDEF
+      - CACHE=cache_lab4:6379
+    depends_on:
+      db_lab4:
+        condition: service_healthy
+    ports:
+      - 8081:8080
+    networks:
+      - lab04-network
+
+  lab_04_pizza:
+    tty: true
+    container_name: lab_04_pizza
+    build:
+      context: .
+      dockerfile: lab_04_dockerfile
+    environment:
+      - DB_HOST=lab04_postgres
+      - DB_PORT=5432
+      - DB_LOGIN=stud
+      - DB_PASSWORD=stud
+      - DB_DATABASE=archdb
+      - MONGO_HOST=mongodb_lab4
+      - MONGO_PORT=27017
+      - MONGO_DATABASE=arch
+      - JWT_KEY=0123456789ABCDEF0123456789ABCDEF
+      - CACHE=cache_lab4:6379
+    depends_on:
+      db_lab4:
+        condition: service_healthy
+    ports:
+      - 8082:8080
+    networks:
+      - lab04-network
+
+  lab_04_gateway:
+    tty: true
+    container_name: lab_04_gateway
+    build:
+      context: .
+      dockerfile: lab_04_gateway_dockerfile
+    environment:
+      - DB_HOST=lab04_postgres
+      - DB_PORT=5432
+      - DB_LOGIN=stud
+      - DB_PASSWORD=stud
+      - DB_DATABASE=archdb
+      - MONGO_HOST=mongodb_lab4
+      - MONGO_PORT=27017
+      - MONGO_DATABASE=arch
+      - JWT_KEY=0123456789ABCDEF0123456789ABCDEF
+      - CACHE=cache_lab4:6379
+      - USER_ADDRESS=http://lab_04_user:8080
+      - DATA_ADDRESS=http://lab_04_pizza:8080
+    ports:
+      - 8888:8888
+    networks:
+      - lab04-network
+
+  db_lab4:
+    container_name: lab04_postgres
+    image: postgres:15
+    environment:
+      - POSTGRES_USER=stud
+      - POSTGRES_PASSWORD=stud
+      - PGDATA=/data/postgres
+      - POSTGRES_DB=archdb
+    volumes:
+      - lab04_db:/data/postgres
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -d postgres" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    networks:
+      - lab04-network
+
+  mongodb_lab4:
+    image: mongo:5.0
+    container_name: mongodb_lab2
+    restart: on-failure
+    networks:
+      - lab04-network
+    volumes:
+      - mongodbdata_lab3:/data/db
+      - ./mongo-init.sh:/docker-entrypoint-initdb.d/mongo-init.sh:ro
+    ports:
+      - '27017:27017'
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok' | mongosh localhost:27017/test --quiet
+
+  cache_lab4:
+    container_name: cache_lab4
+    image: redis:6.2-alpine
+    restart: always
+    ports:
+      - '6379:6379'
+    command: redis-server --save 20 1 --loglevel warning 
+    networks:
+      - lab04-network
+    volumes: 
+      - lab04_cache:/data
+
+volumes:
+  lab04_db:
+  lab04_cache:
+  mongodbdata_lab3:
+
+
+networks:
+  lab04-network:
+    driver: "bridge"
+    external: false

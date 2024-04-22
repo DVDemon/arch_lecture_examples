@@ -131,7 +131,7 @@ public:
         std::string base_url_data = "http://localhost:8080";
 
         if(std::getenv("USER_ADDRESS")) base_url_user = std::getenv("USER_ADDRESS");
-        if(std::getenv("DATA_ADDRESS")) base_url_user = std::getenv("DATA_ADDRESS");
+        if(std::getenv("DATA_ADDRESS")) base_url_data = std::getenv("DATA_ADDRESS");
 
         std::string scheme;
         std::string info;
