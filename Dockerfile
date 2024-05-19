@@ -84,6 +84,17 @@ RUN git clone --recurse-submodules https://github.com/microsoft/cppgraphqlgen.gi
     cd .. &&\
     cd ..
 
+RUN git clone https://github.com/yhirose/cpp-httplib &&\
+    cd cpp-httplib &&\
+    mkdir build &&\
+    cd build &&\
+    cmake .. &&\
+    make &&\
+    make install &&\
+    cd .. &&\
+    cd ..
+
+
 RUN ldconfig
 
 WORKDIR /opt/arch

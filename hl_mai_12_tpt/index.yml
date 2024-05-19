@@ -1,0 +1,83 @@
+openapi: '3.0.2'
+info:
+  title: API Title
+  version: '1.0'
+servers:
+  - url: http://localhost:8080
+paths:
+  /change_user/{id}:
+    get:
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: integer
+          required: true
+          description: Numeric ID of the user to get
+        - in: query
+          name: tx
+          schema:
+            type: integer
+          required: true
+          description: transaction ID
+        - in: query
+          name: value
+          schema:
+            type: string
+          required: true
+          description: value 
+        
+      responses:
+        '200':
+          description: OK
+  /get_user/{id}:
+    get:
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: integer
+          required: true
+          description: Numeric ID of the user to get
+      responses:
+        '200':
+          description: OK
+
+  /prepare/{id}:
+    get:
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: integer
+          required: true
+          description: prepare tx id
+      responses:
+        '200':
+          description: OK
+
+  /commit/{id}:
+    get:
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: integer
+          required: true
+          description: commit tx id
+      responses:
+        '200':
+          description: OK
+          
+  /abort/{id}:
+    get:
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: integer
+          required: true
+          description: abort tx id
+      responses:
+        '200':
+          description: OK
